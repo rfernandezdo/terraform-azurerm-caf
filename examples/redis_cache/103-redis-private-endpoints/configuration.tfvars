@@ -63,8 +63,8 @@ vnets = {
     specialsubnets = {}
     subnets = {
       pep = {
-        name                                           = "pep"
-        cidr                                           = ["10.1.0.0/28"]
+        name                              = "pep"
+        cidr                              = ["10.1.0.0/28"]
         private_endpoint_network_policies = "Enabled"
       }
     }

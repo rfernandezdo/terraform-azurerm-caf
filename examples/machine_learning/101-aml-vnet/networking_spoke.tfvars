@@ -38,8 +38,8 @@ vnets = {
         nsg_key           = "empty_nsg"
       }
       private_endpoints = {
-        name                                           = "private_endpoints"
-        cidr                                           = ["100.64.55.0/24"]
+        name                              = "private_endpoints"
+        cidr                              = ["100.64.55.0/24"]
         private_endpoint_network_policies = "Enabled"
       }
     }

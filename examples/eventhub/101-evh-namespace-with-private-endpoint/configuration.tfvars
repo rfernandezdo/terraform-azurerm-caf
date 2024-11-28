@@ -66,8 +66,8 @@ vnets = {
     #specialsubnets = {}
     subnets = {
       evh_subnet = {
-        name                                           = "evh_subnet"
-        cidr                                           = ["10.150.120.0/25"]
+        name                              = "evh_subnet"
+        cidr                              = ["10.150.120.0/25"]
         private_endpoint_network_policies = "Enabled"
 
       }

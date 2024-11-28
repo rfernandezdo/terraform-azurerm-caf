@@ -26,7 +26,7 @@ cognitive_services_account = {
     sku_name = "S0"
     tags = {
       env = "test"
-    }   
+    }
 
   }
 }

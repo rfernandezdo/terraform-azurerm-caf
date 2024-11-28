@@ -49,9 +49,9 @@ role_mapping = {
 
 backup_vault_policies = {
   policy0 = {
-    type               = "blob_storage" # policy type, blob_storage and disk supported
-    backup_vault_key   = "bv0"
-    policy_name        = "backup-policy-lvl0"
+    type                                   = "blob_storage" # policy type, blob_storage and disk supported
+    backup_vault_key                       = "bv0"
+    policy_name                            = "backup-policy-lvl0"
     operational_default_retention_duration = "P50D" #Specific ISO 8601 format
   }
 }

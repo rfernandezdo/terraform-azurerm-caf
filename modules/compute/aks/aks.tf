@@ -69,8 +69,8 @@ resource "azurerm_kubernetes_cluster" "aks" {
     vm_size                       = var.settings.default_node_pool.vm_size
     capacity_reservation_group_id = try(var.settings.capacity_reservation_group_id, null)
     host_group_id                 = try(var.settings.host_group_id, null)
-    pod_subnet_id  = can(var.settings.default_node_pool.pod_subnet_key) == false || can(var.settings.default_node_pool.pod_subnet.key) == false || can(var.settings.default_node_pool.pod_subnet_id) || can(var.settings.default_node_pool.pod_subnet.resource_id) ? try(var.settings.default_node_pool.pod_subnet_id, var.settings.default_node_pool.pod_subnet.resource_id, null) : var.vnets[try(var.settings.lz_key, var.client_config.landingzone_key)][var.settings.vnet_key].subnets[try(var.settings.default_node_pool.pod_subnet_key, var.settings.default_node_pool.pod_subnet.key)].id
-    vnet_subnet_id = can(var.settings.default_node_pool.vnet_subnet_id) || can(var.settings.default_node_pool.subnet.resource_id) ? try(var.settings.default_node_pool.vnet_subnet_id, var.settings.default_node_pool.subnet.resource_id) : var.vnets[try(var.settings.vnet.lz_key, var.settings.lz_key, var.client_config.landingzone_key)][try(var.settings.vnet.key, var.settings.vnet_key)].subnets[try(var.settings.default_node_pool.subnet_key, var.settings.default_node_pool.subnet.key)].id
+    pod_subnet_id                 = can(var.settings.default_node_pool.pod_subnet_key) == false || can(var.settings.default_node_pool.pod_subnet.key) == false || can(var.settings.default_node_pool.pod_subnet_id) || can(var.settings.default_node_pool.pod_subnet.resource_id) ? try(var.settings.default_node_pool.pod_subnet_id, var.settings.default_node_pool.pod_subnet.resource_id, null) : var.vnets[try(var.settings.lz_key, var.client_config.landingzone_key)][var.settings.vnet_key].subnets[try(var.settings.default_node_pool.pod_subnet_key, var.settings.default_node_pool.pod_subnet.key)].id
+    vnet_subnet_id                = can(var.settings.default_node_pool.vnet_subnet_id) || can(var.settings.default_node_pool.subnet.resource_id) ? try(var.settings.default_node_pool.vnet_subnet_id, var.settings.default_node_pool.subnet.resource_id) : var.vnets[try(var.settings.vnet.lz_key, var.settings.lz_key, var.client_config.landingzone_key)][try(var.settings.vnet.key, var.settings.vnet_key)].subnets[try(var.settings.default_node_pool.subnet_key, var.settings.default_node_pool.subnet.key)].id
 
     dynamic "upgrade_settings" {
       for_each = try(var.settings.default_node_pool.upgrade_settings, null) == null ? [] : [1]
@@ -216,7 +216,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
     for_each = try(var.settings.api_server_access_profile[*], {})
 
     content {
-      authorized_ip_ranges     = try(api_server_access_profile.value.authorized_ip_ranges, null)
+      authorized_ip_ranges = try(api_server_access_profile.value.authorized_ip_ranges, null)
     }
   }
 
@@ -346,7 +346,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
       mode                             = try(service_mesh_profile.value.mode, null)
       internal_ingress_gateway_enabled = try(service_mesh_profile.value.internal_ingress_gateway_enabled, null)
       external_ingress_gateway_enabled = try(service_mesh_profile.value.external_ingress_gateway_enabled, null)
-      revisions = try(service_mesh_profile.value.revisions, null)
+      revisions                        = try(service_mesh_profile.value.revisions, null)
     }
   }
 
@@ -514,9 +514,9 @@ resource "azurerm_kubernetes_cluster_node_pool" "nodepools" {
     }
   }
 
-  fips_enabled       = try(each.value.fips_enabled, false)
-  kubelet_disk_type  = try(each.value.kubelet_disk_type, null)
-  max_pods           = try(each.value.max_pods, null)
+  fips_enabled      = try(each.value.fips_enabled, false)
+  kubelet_disk_type = try(each.value.kubelet_disk_type, null)
+  max_pods          = try(each.value.max_pods, null)
 
   dynamic "node_network_profile" {
     for_each = try(var.settings.node_network_profile[*], {})

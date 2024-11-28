@@ -98,8 +98,8 @@ vnets = {
         service_endpoints = ["Microsoft.KeyVault"]
       }
       private_link = {
-        name                                           = "private-links"
-        cidr                                           = ["10.150.100.128/26"]
+        name                              = "private-links"
+        cidr                              = ["10.150.100.128/26"]
         private_endpoint_network_policies = "Enabled"
       }
     }

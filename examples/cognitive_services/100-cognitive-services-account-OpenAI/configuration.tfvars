@@ -33,5 +33,5 @@ cognitive_services_account = {
     #   default_action = "Allow"
     #   ip_rules       = ["10.10.10.0/16"]
     # }
-  }   
+  }
 }

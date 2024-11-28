@@ -36,8 +36,8 @@ vnets = {
     }
     subnets = {
       web = {
-        name                                           = "web-subnet"
-        cidr                                           = ["10.0.1.0/24"]
+        name                              = "web-subnet"
+        cidr                              = ["10.0.1.0/24"]
         private_endpoint_network_policies = "Enabled"
       }
     }

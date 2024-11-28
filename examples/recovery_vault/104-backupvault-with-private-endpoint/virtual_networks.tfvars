@@ -11,8 +11,8 @@ vnets = {
     #specialsubnets = {}
     subnets = {
       subnet_001 = {
-        name                                           = "privatelink_subnet"
-        cidr                                           = ["10.150.105.0/25"]
+        name                              = "privatelink_subnet"
+        cidr                              = ["10.150.105.0/25"]
         private_endpoint_network_policies = "Enabled"
       }
     }

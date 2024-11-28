@@ -76,8 +76,8 @@ vnets = {
     }
     subnets = {
       pep = {
-        name                                           = "pep"
-        cidr                                           = ["10.100.100.0/28"]
+        name                              = "pep"
+        cidr                              = ["10.100.100.0/28"]
         private_endpoint_network_policies = "Enabled"
       }
       databricks_public = {

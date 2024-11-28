@@ -29,8 +29,8 @@ vnets = {
         nsg_key = "azure_bastion_nsg"
       }
       private_endpoints = {
-        name                                           = "private_endpoints"
-        cidr                                           = ["100.64.51.0/27"]
+        name                              = "private_endpoints"
+        cidr                              = ["100.64.51.0/27"]
         private_endpoint_network_policies = "Enabled"
       }
       jumpbox = {

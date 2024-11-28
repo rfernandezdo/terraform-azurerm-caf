@@ -29,8 +29,8 @@ vnets = {
         nsg_key = "jumpbox"
       }
       private_endpoints = {
-        name                                           = "private_endpoints"
-        cidr                                           = ["100.64.103.128/25"]
+        name                              = "private_endpoints"
+        cidr                              = ["100.64.103.128/25"]
         private_endpoint_network_policies = "Enabled"
       }
     }
@@ -56,8 +56,8 @@ vnets = {
         nsg_key = "jumpbox"
       }
       private_endpoints = {
-        name                                           = "private_endpoints"
-        cidr                                           = ["100.65.103.128/25"]
+        name                              = "private_endpoints"
+        cidr                              = ["100.65.103.128/25"]
         private_endpoint_network_policies = "Enabled"
       }
     }

@@ -15,10 +15,10 @@ resource_groups = {
 
 cosmos_dbs = {
   cosmosdb_account_re1 = {
-    name                      = "cosmosdbtable-ex101"
-    resource_group_key        = "cosmosdb_region1"
-    offer_type                = "Standard"
-    kind                      = "GlobalDocumentDB"
+    name                       = "cosmosdbtable-ex101"
+    resource_group_key         = "cosmosdb_region1"
+    offer_type                 = "Standard"
+    kind                       = "GlobalDocumentDB"
     automatic_failover_enabled = "true"
 
     consistency_policy = {
@@ -45,7 +45,7 @@ cosmos_dbs = {
 
     # optional
     free_tier_enabled                = false
-    ip_range_filter                 = []
+    ip_range_filter                  = []
     multiple_write_locations_enabled = false
     tags = {
       "project" = "EDH"

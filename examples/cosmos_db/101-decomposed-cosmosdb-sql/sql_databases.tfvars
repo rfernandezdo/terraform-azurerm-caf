@@ -15,10 +15,10 @@ resource_groups = {
 
 cosmos_dbs = {
   cosmosdb_account_re1 = {
-    name                      = "cosmosdb-ex101"
-    resource_group_key        = "cosmosdb_region1"
-    offer_type                = "Standard"
-    kind                      = "GlobalDocumentDB"
+    name                       = "cosmosdb-ex101"
+    resource_group_key         = "cosmosdb_region1"
+    offer_type                 = "Standard"
+    kind                       = "GlobalDocumentDB"
     automatic_failover_enabled = "true"
 
     consistency_policy = {
@@ -43,7 +43,7 @@ cosmos_dbs = {
 
     # Optional
     free_tier_enabled = false
-    ip_range_filter  = ["116.88.85.63", "116.88.85.64"]
+    ip_range_filter   = ["116.88.85.63", "116.88.85.64"]
     #capabilities              = ["EnableTable"]
     multiple_write_locations_enabled = false
     tags = {
@@ -69,9 +69,9 @@ cosmosdb_sql_databases = {
     }
     containers = {
       container_re1 = {
-        name               = "container-ex101"
+        name                = "container-ex101"
         partition_key_paths = ["/definition/id"]
-        throughput         = 400
+        throughput          = 400
         unique_key = {
           paths = ["/definition/idlong", "/definition/idshort"]
         }

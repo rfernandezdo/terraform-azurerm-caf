@@ -11,8 +11,8 @@ vnets = {
     subnets = {
 
       subnet_01 = {
-        name                                           = "subnet-01"
-        cidr                                           = ["10.100.1.128/25"]
+        name                              = "subnet-01"
+        cidr                              = ["10.100.1.128/25"]
         private_endpoint_network_policies = "Enabled"
       }
 

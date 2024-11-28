@@ -9,15 +9,15 @@ vnets = {
     specialsubnets = {}
     subnets = {
       aks_nodepool_system = {
-        name                                           = "aks_nodepool_system"
-        cidr                                           = ["100.64.48.0/24"]
-        nsg_key                                        = "azure_kubernetes_cluster_nsg"
+        name                              = "aks_nodepool_system"
+        cidr                              = ["100.64.48.0/24"]
+        nsg_key                           = "azure_kubernetes_cluster_nsg"
         private_endpoint_network_policies = "Enabled"
       }
       aks_nodepool_user1 = {
-        name                                           = "aks_nodepool_user1"
-        cidr                                           = ["100.64.49.0/24"]
-        nsg_key                                        = "azure_kubernetes_cluster_nsg"
+        name                              = "aks_nodepool_user1"
+        cidr                              = ["100.64.49.0/24"]
+        nsg_key                           = "azure_kubernetes_cluster_nsg"
         private_endpoint_network_policies = "Enabled"
       }
       aks_nodepool_user2 = {
@@ -31,8 +31,8 @@ vnets = {
         nsg_key = "azure_bastion_nsg"
       }
       private_endpoints = {
-        name                                           = "private_endpoints"
-        cidr                                           = ["100.64.51.0/27"]
+        name                              = "private_endpoints"
+        cidr                              = ["100.64.51.0/27"]
         private_endpoint_network_policies = "Enabled"
       }
       jumpbox = {
@@ -53,8 +53,8 @@ vnets = {
     }
     subnets = {
       private_endpoints = {
-        name                                           = "private_endpoints"
-        cidr                                           = ["10.0.0.0/27"]
+        name                              = "private_endpoints"
+        cidr                              = ["10.0.0.0/27"]
         private_endpoint_network_policies = "Enabled"
       }
     }

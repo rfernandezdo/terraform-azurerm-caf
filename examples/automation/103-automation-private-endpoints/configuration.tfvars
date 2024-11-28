@@ -72,8 +72,8 @@ vnets = {
     #specialsubnets = {}
     subnets = {
       auto_subnet = {
-        name                                           = "auto-subnet"
-        cidr                                           = ["10.150.102.0/25"]
+        name                              = "auto-subnet"
+        cidr                              = ["10.150.102.0/25"]
         private_endpoint_network_policies = "Enabled"
       }
     }

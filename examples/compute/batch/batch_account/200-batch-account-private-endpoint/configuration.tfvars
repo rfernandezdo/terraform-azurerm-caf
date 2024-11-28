@@ -51,9 +51,9 @@ vnets = {
     specialsubnets = {}
     subnets = {
       pep = {
-        name                                           = "pep"
-        cidr                                           = ["100.64.103.0/27"]
-        service_endpoints                              = ["Microsoft.Storage"]
+        name                              = "pep"
+        cidr                              = ["100.64.103.0/27"]
+        service_endpoints                 = ["Microsoft.Storage"]
         private_endpoint_network_policies = "Enabled"
       }
     }

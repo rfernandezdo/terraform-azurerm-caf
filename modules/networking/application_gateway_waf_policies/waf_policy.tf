@@ -93,6 +93,7 @@ resource "azurerm_web_application_firewall_policy" "wafpolicy" {
                   id      = rule.value.id
                   enabled = try(rule.value.enabled, false)
                   action  = try(rule.value.action, null)
+                }
               }
             }
           }
@@ -100,5 +101,4 @@ resource "azurerm_web_application_firewall_policy" "wafpolicy" {
       }
     }
   }
-}
 }

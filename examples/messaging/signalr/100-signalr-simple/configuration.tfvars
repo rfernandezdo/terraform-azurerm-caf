@@ -22,8 +22,8 @@ vnets = {
     specialsubnets = {}
     subnets = {
       subnet1 = {
-        name                                           = "signalr-pr-subnet"
-        cidr                                           = ["10.100.100.0/29"]
+        name                              = "signalr-pr-subnet"
+        cidr                              = ["10.100.100.0/29"]
         private_endpoint_network_policies = "Enabled"
       }
     }
@@ -38,8 +38,8 @@ vnets = {
     specialsubnets = {}
     subnets = {
       subnet1 = {
-        name                                           = "signalr-pr-subnet"
-        cidr                                           = ["10.100.100.8/29"]
+        name                              = "signalr-pr-subnet"
+        cidr                              = ["10.100.100.8/29"]
         private_endpoint_network_policies = "Enabled"
       }
     }

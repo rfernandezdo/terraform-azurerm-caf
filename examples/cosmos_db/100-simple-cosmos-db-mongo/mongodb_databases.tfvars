@@ -15,10 +15,10 @@ resource_groups = {
 
 cosmos_dbs = {
   cosmosdb_account_re1 = {
-    name                      = "cosmosdbmongo-ex102"
-    resource_group_key        = "cosmosdb_region1"
-    offer_type                = "Standard"
-    kind                      = "MongoDB"
+    name                       = "cosmosdbmongo-ex102"
+    resource_group_key         = "cosmosdb_region1"
+    offer_type                 = "Standard"
+    kind                       = "MongoDB"
     automatic_failover_enabled = "true"
 
     consistency_policy = {
@@ -45,7 +45,7 @@ cosmos_dbs = {
 
     # optional
     free_tier_enabled                = false
-    ip_range_filter                 = []
+    ip_range_filter                  = []
     multiple_write_locations_enabled = false
     tags = {
       "project" = "EDH"

@@ -50,7 +50,7 @@ locals {
     attestationEndpoint                         = try(var.cloud.attestationEndpoint, {})
     azureDatalakeAnalyticsCatalogAndJobEndpoint = try(var.cloud.azureDatalakeAnalyticsCatalogAndJobEndpoint, {})
     azureDatalakeStoreFileSystemEndpoint        = try(var.cloud.azureDatalakeStoreFileSystemEndpoint, {})
-    keyvaultDns                                 = try(var.cloud.keyvaultDns, {})    
+    keyvaultDns                                 = try(var.cloud.keyvaultDns, {})
     mhsmDns                                     = try(var.cloud.mhsmDns, {})
     mysqlServerEndpoint                         = try(var.cloud.mysqlServerEndpoint, {})
     postgresqlServerEndpoint                    = try(var.cloud.postgresqlServerEndpoint, {})
@@ -130,7 +130,7 @@ locals {
     database_migration_projects        = try(var.database.database_migration_projects, {})
     databricks_workspaces              = try(var.database.databricks_workspaces, {})
     databricks_access_connectors       = try(var.database.databricks_access_connectors, {})
-    machine_learning_workspaces        = try(var.database.machine_learning_workspaces, {})    
+    machine_learning_workspaces        = try(var.database.machine_learning_workspaces, {})
     mssql_databases                    = try(var.database.mssql_databases, {})
     mssql_elastic_pools                = try(var.database.mssql_elastic_pools, {})
     mssql_failover_groups              = try(var.database.mssql_failover_groups, {})
@@ -258,7 +258,7 @@ locals {
   }
 
   cognitive_services = {
-    cognitive_services_account = try(var.cognitive_services.cognitive_services_account, {})
+    cognitive_services_account             = try(var.cognitive_services.cognitive_services_account, {})
     cognitive_account_customer_managed_key = try(var.cognitive_services.cognitive_account_customer_managed_key, {})
     cognitive_deployment                   = try(var.cognitive_services.cognitive_deployment, {})
   }

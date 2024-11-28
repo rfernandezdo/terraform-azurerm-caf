@@ -26,7 +26,7 @@ cosmos_dbs = {
     resource_group_key            = "cosmosdb_region1"
     offer_type                    = "Standard"
     kind                          = "GlobalDocumentDB"
-    automatic_failover_enabled     = "true"
+    automatic_failover_enabled    = "true"
     public_network_access_enabled = false
 
     consistency_policy = {
@@ -51,7 +51,7 @@ cosmos_dbs = {
 
     # Optional
     free_tier_enabled = false
-    ip_range_filter  = ["116.88.85.63", "116.88.85.64"]
+    ip_range_filter   = ["116.88.85.63", "116.88.85.64"]
     #capabilities              = ["EnableTable"]
     multiple_write_locations_enabled = false
     tags = {
@@ -98,8 +98,8 @@ vnets = {
     #specialsubnets = {}
     subnets = {
       cosmosdb_subnet = {
-        name                                           = "cosmos-subnet"
-        cidr                                           = ["10.150.102.0/25"]
+        name                              = "cosmos-subnet"
+        cidr                              = ["10.150.102.0/25"]
         private_endpoint_network_policies = "Enabled"
       }
     }

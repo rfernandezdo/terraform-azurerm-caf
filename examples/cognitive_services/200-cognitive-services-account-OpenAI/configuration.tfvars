@@ -32,25 +32,25 @@ cognitive_services_account = {
     #   default_action = "Allow"
     #   ip_rules       = ["10.10.10.0/16"]
     # }
-  }   
+  }
 }
 
 cognitive_deployment = {
   openai_deployment-1 = {
-    name = "gpt4"
+    name                  = "gpt4"
     cognitive_account_key = "openai_account-1"
     #cognitive_account_id = "/subscriptions/12345678-1234-9876-4563-123456789012/resourceGroups/example-resource-group/providers/Microsoft.CognitiveServices/accounts/accountValue"
     #Check https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models?tabs=python-secure%2Cglobal-standard%2Cstandard-chat-completions
     #Check  https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models?tabs=python-secure%2Cglobal-standard%2Cstandard-chat-completions#global-standard-model-availability
     model = {
-      format = "OpenAI"
-      name = "gpt-4"
+      format  = "OpenAI"
+      name    = "gpt-4"
       version = "turbo-2024-04-09"
 
     }
     sku = {
-      name = "Standard"
-      capacity = 1  
+      name     = "Standard"
+      capacity = 1
     }
   }
 }

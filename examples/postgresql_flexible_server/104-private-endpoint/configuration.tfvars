@@ -127,8 +127,8 @@ vnets = {
 
     subnets = {
       private_endpoints = {
-        name                                           = "private-endpoint"
-        cidr                                           = ["10.10.0.0/25"]
+        name                              = "private-endpoint"
+        cidr                              = ["10.10.0.0/25"]
         private_endpoint_network_policies = "Enabled"
       }
     }

@@ -85,14 +85,14 @@ resource "azurerm_linux_virtual_machine_scale_set" "vmss" {
   dynamic "scale_in" {
     for_each = can(each.value.scale_in) ? [1] : []
     content {
-      rule = each.value.scale_in.rule
+      rule                   = each.value.scale_in.rule
       force_deletion_enabled = each.value.scale_in.force_deletion_enabled
     }
   }
-  single_placement_group          = try(each.value.single_placement_group, null)
-  upgrade_mode                    = try(each.value.upgrade_mode, null)
-  zone_balance                    = try(each.value.zone_balance, null)
-  zones                           = try(each.value.zones, null)
+  single_placement_group = try(each.value.single_placement_group, null)
+  upgrade_mode           = try(each.value.upgrade_mode, null)
+  zone_balance           = try(each.value.zone_balance, null)
+  zones                  = try(each.value.zones, null)
 
   dynamic "admin_ssh_key" {
     for_each = lookup(each.value, "disable_password_authentication", true) == true ? [1] : []
@@ -282,14 +282,14 @@ resource "azurerm_linux_virtual_machine_scale_set" "vmss_autoscaled" {
   dynamic "scale_in" {
     for_each = can(each.value.scale_in) ? [1] : []
     content {
-      rule = each.value.scale_in.rule
+      rule                   = each.value.scale_in.rule
       force_deletion_enabled = each.value.scale_in.force_deletion_enabled
     }
   }
-  single_placement_group          = try(each.value.single_placement_group, null)
-  upgrade_mode                    = try(each.value.upgrade_mode, null)
-  zone_balance                    = try(each.value.zone_balance, null)
-  zones                           = try(each.value.zones, null)
+  single_placement_group = try(each.value.single_placement_group, null)
+  upgrade_mode           = try(each.value.upgrade_mode, null)
+  zone_balance           = try(each.value.zone_balance, null)
+  zones                  = try(each.value.zones, null)
 
   dynamic "admin_ssh_key" {
     for_each = lookup(each.value, "disable_password_authentication", true) == true ? [1] : []

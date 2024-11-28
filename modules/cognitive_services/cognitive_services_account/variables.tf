@@ -86,42 +86,42 @@ variable "settings" {
   
   ```
   DESCRIPTION
-  type = any
- # For the future, for now, doesn't work well with the validation block and with optional vars
- # type = object({
- #   name = string
- #   kind = string
- #   sku_name = string
- #   custom_subdomain_name = optional(string)
- #   dynamic_throttling_enabled = optional(bool)
- #   customer_managed_key = optional(object({
- #     key_vault_key_id =  string
- #     identity_client_id = optional(string)
- #   }),{})
- #   fqdns = optional(list(string))
- #   identity = optional(object({
- #     type = string
- #     identity_ids = optional(list(string))
- #   }),{})
- #   local_auth_enabled = optional(bool)
- #   metrics_advisor_aad_client_id = optional(string)
- #   metrics_advisor_super_user_name = optional(string)
- #   metrics_advisor_website_name = optional(string)
- #   network_acls = optional(object({
- #     default_action = string
- #     ip_rules = optional(list(string))
- #     virtual_network_subnet_ids = optional(list(string))
- #   }),{})
- #   outbound_network_access_restricted = optional(bool)
- #   public_network_access_enabled = optional(bool)
- #   qna_runtime_endpoint = optional(string)
- #   custom_question_answering_search_service_id = optional(string)
- #   custom_question_answering_search_service_key = optional(string)
- #   storage = optional(object({
- #     storage_account_id = string
- #     identity_client_id = optional(string)
- #   }))
- # })
+  type        = any
+  # For the future, for now, doesn't work well with the validation block and with optional vars
+  # type = object({
+  #   name = string
+  #   kind = string
+  #   sku_name = string
+  #   custom_subdomain_name = optional(string)
+  #   dynamic_throttling_enabled = optional(bool)
+  #   customer_managed_key = optional(object({
+  #     key_vault_key_id =  string
+  #     identity_client_id = optional(string)
+  #   }),{})
+  #   fqdns = optional(list(string))
+  #   identity = optional(object({
+  #     type = string
+  #     identity_ids = optional(list(string))
+  #   }),{})
+  #   local_auth_enabled = optional(bool)
+  #   metrics_advisor_aad_client_id = optional(string)
+  #   metrics_advisor_super_user_name = optional(string)
+  #   metrics_advisor_website_name = optional(string)
+  #   network_acls = optional(object({
+  #     default_action = string
+  #     ip_rules = optional(list(string))
+  #     virtual_network_subnet_ids = optional(list(string))
+  #   }),{})
+  #   outbound_network_access_restricted = optional(bool)
+  #   public_network_access_enabled = optional(bool)
+  #   qna_runtime_endpoint = optional(string)
+  #   custom_question_answering_search_service_id = optional(string)
+  #   custom_question_answering_search_service_key = optional(string)
+  #   storage = optional(object({
+  #     storage_account_id = string
+  #     identity_client_id = optional(string)
+  #   }))
+  # })
   #validation {
   #  condition     = alltrue([
   #    for o in var.settings :

@@ -14,11 +14,11 @@ resource_groups = {
 # https://docs.microsoft.com/en-us/azure/storage/
 storage_accounts = {
   sa1 = {
-    name                      = "sa1dev"
-    resource_group_key        = "test"
-    account_kind              = "FileStorage" #Valid options are BlobStorage, BlockBlobStorage, FileStorage, Storage and StorageV2. Defaults to StorageV2
-    account_tier              = "Premium"     #Valid options are Standard and Premium. For BlockBlobStorage and FileStorage accounts only Premium is valid
-    account_replication_type  = "LRS"         # https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy
+    name                       = "sa1dev"
+    resource_group_key         = "test"
+    account_kind               = "FileStorage" #Valid options are BlobStorage, BlockBlobStorage, FileStorage, Storage and StorageV2. Defaults to StorageV2
+    account_tier               = "Premium"     #Valid options are Standard and Premium. For BlockBlobStorage and FileStorage accounts only Premium is valid
+    account_replication_type   = "LRS"         # https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy
     https_traffic_only_enabled = true
 
 

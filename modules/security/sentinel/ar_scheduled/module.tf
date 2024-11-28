@@ -37,9 +37,9 @@ resource "azurerm_sentinel_alert_rule_scheduled" "scheduled" {
           lookback_duration       = lookup(var.settings.incident.grouping, "lookback_duration", "PT5M")
           reopen_closed_incidents = lookup(var.settings.incident.grouping, "reopen_closed_incidents", false)
           entity_matching_method  = lookup(var.settings.incident.grouping, "entity_matching_method", null)
-          by_entities       = lookup(var.settings.incident.grouping, "by_entities", null)
-          by_alert_details  = lookup(var.settings.incident.grouping, "by_alert_details", null)
-          by_custom_details = lookup(var.settings.incident.grouping, "by_custom_details", null)
+          by_entities             = lookup(var.settings.incident.grouping, "by_entities", null)
+          by_alert_details        = lookup(var.settings.incident.grouping, "by_alert_details", null)
+          by_custom_details       = lookup(var.settings.incident.grouping, "by_custom_details", null)
         }
       }
     }

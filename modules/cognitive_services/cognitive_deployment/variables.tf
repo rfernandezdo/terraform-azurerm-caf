@@ -37,8 +37,8 @@ variable "settings" {
     }
     ```
 DESCRIPTION
- type = any
-/*
+  type        = any
+  /*
   # For the future, for now, doesn't work well with the validation block and with optional vars
   type = object({
     name                 = string

@@ -175,10 +175,10 @@ vnets = {
     }
     subnets = {
       servicesSubnetName = {
-        name                                           = "servicesSubnetName"
-        cidr                                           = ["10.1.0.0/24"]
-        nsg_key                                        = "nsg"
-        service_endpoints                              = ["Microsoft.KeyVault"]
+        name                              = "servicesSubnetName"
+        cidr                              = ["10.1.0.0/24"]
+        nsg_key                           = "nsg"
+        service_endpoints                 = ["Microsoft.KeyVault"]
         private_endpoint_network_policies = "Enabled"
       }
     }

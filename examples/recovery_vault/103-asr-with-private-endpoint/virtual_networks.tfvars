@@ -11,8 +11,8 @@ vnets = {
     #specialsubnets = {}
     subnets = {
       asr_subnet = {
-        name                                           = "asr_subnet"
-        cidr                                           = ["10.150.105.0/25"]
+        name                              = "asr_subnet"
+        cidr                              = ["10.150.105.0/25"]
         private_endpoint_network_policies = "Enabled"
 
       }

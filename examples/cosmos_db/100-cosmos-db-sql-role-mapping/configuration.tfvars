@@ -21,10 +21,10 @@ managed_identities = {
 }
 cosmos_dbs = {
   cosmosdb_account_re1 = {
-    name                      = "cosmosdb"
-    resource_group_key        = "cosmosdb_region1"
-    offer_type                = "Standard"
-    kind                      = "GlobalDocumentDB"
+    name                       = "cosmosdb"
+    resource_group_key         = "cosmosdb_region1"
+    offer_type                 = "Standard"
+    kind                       = "GlobalDocumentDB"
     automatic_failover_enabled = "true"
 
     #This parameter needs for more correct work with Cosmos custom roles
@@ -59,7 +59,7 @@ cosmos_dbs = {
         }
         containers = {
           container1 = {
-            name               = "container-ex101"
+            name = "container-ex101"
             # Ensure partition_key_paths is a list
             partition_key_paths = ["/partitionKeyPath"]
 

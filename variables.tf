@@ -24,7 +24,7 @@ variable "cloud" {
     attestationEndpoint                         = ".attest.azure.net"
     azureDatalakeAnalyticsCatalogAndJobEndpoint = "azuredatalakeanalytics.net"
     azureDatalakeStoreFileSystemEndpoint        = "azuredatalakestore.net"
-    keyvaultDns                                 = ".vault.azure.net"    
+    keyvaultDns                                 = ".vault.azure.net"
     mhsmDns                                     = ".managedhsm.azure.net"
     mysqlServerEndpoint                         = ".mysql.database.azure.com"
     postgresqlServerEndpoint                    = ".postgres.database.azure.com"

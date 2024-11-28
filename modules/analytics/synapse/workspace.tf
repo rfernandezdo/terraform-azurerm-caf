@@ -146,9 +146,9 @@ resource "azurerm_synapse_firewall_rule" "wrkspc_firewalls" {
 
 
 resource "azurerm_synapse_workspace_aad_admin" "wrkspc_aad_admin" {
-  for_each = try(var.settings.aad_admin, null) != null ? { for k, v in [var.settings.aad_admin] : k => v } : {}
+  for_each             = try(var.settings.aad_admin, null) != null ? { for k, v in [var.settings.aad_admin] : k => v } : {}
   synapse_workspace_id = azurerm_synapse_workspace.ws.id
-  login     = try(each.value.login, null)
-  object_id = try(each.value.object_id, null)
-  tenant_id = try(each.value.tenant_id, null)
+  login                = try(each.value.login, null)
+  object_id            = try(each.value.object_id, null)
+  tenant_id            = try(each.value.tenant_id, null)
 }

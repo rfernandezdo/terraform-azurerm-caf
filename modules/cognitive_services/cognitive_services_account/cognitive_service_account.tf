@@ -18,13 +18,13 @@ resource "azurerm_cognitive_account" "service" {
   sku_name            = var.settings.sku_name
 
   # all of `custom_subdomain_name,network_acls` must be specified
-  custom_subdomain_name = try(var.settings.custom_subdomain_name, null)
+  custom_subdomain_name      = try(var.settings.custom_subdomain_name, null)
   dynamic_throttling_enabled = try(var.settings.dynamic_throttling_enabled, null)
   #checkov:skip=CKV2_AZURE_22:Ensure that Cognitive Services enables customer-managed key for encryption. This is a conditional resource
   dynamic "customer_managed_key" {
     for_each = can(var.settings.customer_managed_key) ? [var.settings.customer_managed_key] : []
     content {
-      key_vault_key_id = customer_managed_key.value.key_vault_key_id
+      key_vault_key_id   = customer_managed_key.value.key_vault_key_id
       identity_client_id = try(customer_managed_key.value.identity_client_id, null)
     }
   }
@@ -36,10 +36,10 @@ resource "azurerm_cognitive_account" "service" {
       identity_ids = concat(local.managed_identities, try(identity.value.identity_ids, []))
     }
   }
-  local_auth_enabled = try(var.settings.local_auth_enabled, true)
-  metrics_advisor_aad_client_id = (var.settings.kind == "MetricsAdvisor" || var.settings.kind == "QnAMaker") ? try(var.settings.metrics_advisor_aad_client_id, null) : null
+  local_auth_enabled              = try(var.settings.local_auth_enabled, true)
+  metrics_advisor_aad_client_id   = (var.settings.kind == "MetricsAdvisor" || var.settings.kind == "QnAMaker") ? try(var.settings.metrics_advisor_aad_client_id, null) : null
   metrics_advisor_super_user_name = (var.settings.kind == "MetricsAdvisor" || var.settings.kind == "QnAMaker") ? try(var.settings.metrics_advisor_super_user_name, null) : null
-  metrics_advisor_website_name = (var.settings.kind == "MetricsAdvisor" || var.settings.kind == "QnAMaker") ? try(var.settings.metrics_advisor_website_name, null) : null
+  metrics_advisor_website_name    = (var.settings.kind == "MetricsAdvisor" || var.settings.kind == "QnAMaker") ? try(var.settings.metrics_advisor_website_name, null) : null
   dynamic "network_acls" {
     for_each = can(var.settings.network_acls) ? [var.settings.network_acls] : []
     content {
@@ -58,10 +58,10 @@ resource "azurerm_cognitive_account" "service" {
       }
     }
   }
-  outbound_network_access_restricted = try(var.settings.outbound_network_access_restricted, false)
-  public_network_access_enabled = try(var.settings.public_network_access_enabled, true)
-  qna_runtime_endpoint = var.settings.kind == "QnAMaker" ? var.settings.qna_runtime_endpoint : try(var.settings.qna_runtime_endpoint, null)
-  custom_question_answering_search_service_id = var.settings.kind == "TextAnalytics" ? var.settings.custom_question_answering_search_service_id : try(var.settings.custom_question_answering_search_service_id, null)
+  outbound_network_access_restricted           = try(var.settings.outbound_network_access_restricted, false)
+  public_network_access_enabled                = try(var.settings.public_network_access_enabled, true)
+  qna_runtime_endpoint                         = var.settings.kind == "QnAMaker" ? var.settings.qna_runtime_endpoint : try(var.settings.qna_runtime_endpoint, null)
+  custom_question_answering_search_service_id  = var.settings.kind == "TextAnalytics" ? var.settings.custom_question_answering_search_service_id : try(var.settings.custom_question_answering_search_service_id, null)
   custom_question_answering_search_service_key = var.settings.kind == "TextAnalytics" ? var.settings.custom_question_answering_search_service_key : try(var.settings.custom_question_answering_search_service_key, null)
   dynamic "storage" {
     for_each = can(var.settings.storage) ? [var.settings.storage] : []

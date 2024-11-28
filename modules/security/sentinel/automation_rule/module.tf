@@ -31,4 +31,4 @@ resource "azurerm_sentinel_automation_rule" "automation_rule" {
   }
 
   condition_json = try(var.settings.condition_json, null)
-  }
+}
